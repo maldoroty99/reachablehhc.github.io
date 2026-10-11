@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ReachAble Home Healthcare — Occupational Therapy &amp; Navigation at Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EFEEE4; --card:#FBFAF5; --ink:#262420; --muted:#6E6A5D;
+  --moss:#4F6355; --moss-soft:#DFE6DE; --gold:#B08A3E; --line:#D9D3C3;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1C1E1A; --card:#242621; --ink:#EDEAE1; --muted:#A6A192;
+    --moss:#8FAE96; --moss-soft:#2B332B; --gold:#D3A85C; --line:#3A3B34;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1C1E1A; --card:#242621; --ink:#EDEAE1; --muted:#A6A192;
+  --moss:#8FAE96; --moss-soft:#2B332B; --gold:#D3A85C; --line:#3A3B34;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Sans 3",-apple-system,Helvetica,sans-serif;font-size:17px;line-height:1.6;}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;margin:0;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.4rem;}
+a{color:inherit;}
+nav{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 0;border-bottom:1px solid var(--line);}
+.brand{font-family:"Fraunces",serif;font-weight:600;font-size:1.25rem;letter-spacing:.01em;}
+.brand span{color:var(--moss);}
+nav a.cta{background:var(--moss);color:#fff;padding:.55rem 1.1rem;border-radius:6px;text-decoration:none;font-weight:600;font-size:.95rem;}
+section{padding:3.4rem 0;}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center;padding-top:3.2rem;}
+@media(max-width:800px){.hero{grid-template-columns:1fr;}}
+.hero h1{font-size:2.5rem;line-height:1.15;max-width:16ch;}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:42ch;margin:1.1rem 0 1.6rem;}
+.btnrow{display:flex;gap:.8rem;flex-wrap:wrap;}
+.btn-primary{background:var(--moss);color:#fff;padding:.85rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:700;}
+.btn-secondary{border:1.5px solid var(--line);color:var(--ink);padding:.85rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;}
+.route-svg{width:100%;height:auto;}
+.strip{background:var(--moss);color:#fff;padding:.9rem 0;font-size:.95rem;text-align:center;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem;}
+@media(max-width:760px){.two{grid-template-columns:1fr;}}
+.offer h3{font-size:1.3rem;color:var(--moss);margin-bottom:.6rem;}
+.offer p{color:var(--muted);margin:.3rem 0 1rem;}
+.offer ul{margin:0;padding-left:1.2rem;}
+.offer li{margin:.4rem 0;}
+.divider{border:none;border-top:1px solid var(--line);margin:0;}
+.for-list{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem;}
+.for-list span{background:var(--moss-soft);color:var(--moss);padding:.45rem 1rem;border-radius:20px;font-weight:600;font-size:.92rem;}
+.steps{counter-reset:step;display:grid;gap:1.6rem;margin-top:1.8rem;}
+.step{display:grid;grid-template-columns:auto 1fr;gap:1.1rem;align-items:start;}
+.step .num{counter-increment:step;font-family:"Fraunces",serif;font-size:1.6rem;color:var(--gold);width:2.4rem;}
+.step .num::before{content:counter(step);}
+.step h3{font-size:1.1rem;margin-bottom:.25rem;}
+.step p{color:var(--muted);margin:0;}
+.area-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.8rem;margin-top:1.6rem;}
+.town-list{display:flex;flex-wrap:wrap;gap:.6rem 1rem;margin-top:1rem;font-size:.95rem;color:var(--muted);}
+.town-list b{color:var(--ink);}
+.contact{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:2.2rem;text-align:center;}
+.contact h2{font-size:1.7rem;margin-bottom:.6rem;}
+.contact p{color:var(--muted);max-width:38ch;margin:0 auto 1.4rem;}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.85rem;text-align:center;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <div class="brand">Reach<span>Able</span> Home Healthcare</div>
+  <a class="cta" href="#contact">Book a call</a>
+</nav>
+</div>
+
+<div class="wrap">
+<section class="hero">
+  <div>
+    <h1>Occupational Therapy, and a clear path through the home&#8209;care system.</h1>
+    <p class="lead">A registered occupational therapist who can help you make sense of home care, staying at home safely, and community supports — so aging in place stays possible.</p>
+    <div class="btnrow">
+      <a class="btn-primary" href="#contact">Book a call</a>
+      <a class="btn-secondary" href="#offer">See how it works</a>
+    </div>
+  </div>
+  <svg class="route-svg" viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg">
+    <path d="M25 205 C 90 120, 150 230, 210 120 S 300 60, 340 90" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-dasharray="1 9" stroke-linecap="round"/>
+    <circle cx="25" cy="205" r="7" fill="var(--moss)"/>
+    <circle cx="140" cy="150" r="7" fill="var(--moss)"/>
+    <circle cx="210" cy="120" r="7" fill="var(--moss)"/>
+    <circle cx="300" cy="75" r="7" fill="var(--moss)"/>
+    <circle cx="340" cy="90" r="7" fill="var(--moss)"/>
+    <circle cx="58" cy="228" r="7" fill="var(--moss)"/>
+    <circle cx="185" cy="195" r="7" fill="var(--moss)"/>
+    <circle cx="120" cy="188" r="7" fill="var(--moss)"/>
+    <circle cx="268" cy="158" r="7" fill="var(--moss)"/>
+    <text x="0" y="222" font-family="Source Sans 3, sans-serif" font-size="13" fill="var(--ink)">Hamilton</text>
+    <text x="60" y="245" font-family="Source Sans 3, sans-serif" font-size="13" fill="var(--ink)">Stoney Creek</text>
+    <text x="152" y="152" font-family="Source Sans 3, sans-serif" font-size="13" fill="var(--ink)">Burlington</text>
+    <text x="90" y="180" font-family="Source Sans 3, sans-serif" font-size="13" fill="var(--ink)">Halton Hills</text>
+    <text x="195" y="215" font-family="Source Sans 3, sans-serif" font-size="13" fill="var(--ink)">Milton</text>
+    <text x="222" y="118" font-family="Source Sans 3, sans-serif" font-size="13" fill="var(--ink)">Oakville</text>
+    <text x="245" y="178" font-family="Source Sans 3, sans-serif" font-size="13" fill="var(--ink)">Brampton</text>
+    <text x="245" y="66" font-family="Source Sans 3, sans-serif" font-size="13" fill="var(--ink)">Mississauga</text>
+    <text x="342" y="80" font-family="Source Sans 3, sans-serif" font-size="13" fill="var(--ink)">Toronto</text>
+  </svg>
+</section>
+</div>
+
+<div class="strip">Serving the Greater Toronto Area, Halton, Peel, Burlington, Stoney Creek &amp; Hamilton — visits at home, not in a waiting room.</div>
+
+<div class="wrap">
+<section id="offer">
+  <h2 style="font-size:1.7rem;margin-bottom:2rem;">Two kinds of help. One visit.</h2>
+  <div class="two">
+    <div class="offer">
+      <h3>Occupational Therapy</h3>
+      <p>Regulated clinical care, delivered where you live.</p>
+      <ul>
+        <li>Preventative home visits, before an issue arises</li>
+        <li>Home safety &amp; fall-risk assessment</li>
+        <li>Equipment prescription (mobility, bathroom safety, ADP)</li>
+        <li>Functional assessment</li>
+        <li>Caregiver training and coaching</li>
+        <li>Reports for insurers and care applications</li>
+      </ul>
+    </div>
+    <div class="offer">
+      <h3>Service Navigation</h3>
+      <p>Making sense of a system that isn't built to be simple.</p>
+      <ul>
+        <li>Source of support to help navigate the health care system</li>
+        <li>Coordinating with the healthcare team, such as doctors, PSWs, care coordinators, and family</li>
+        <li>Ongoing support for complex situations</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <h2 style="font-size:1.7rem;">Who we're here for</h2>
+  <div class="for-list">
+    <span>Older adults staying in their own home</span>
+    <span>Families planning ahead, before a crisis hits</span>
+    <span>Family caregivers feeling overwhelmed</span>
+    <span>People recovering from a fall or injury</span>
+    <span>People managing chronic conditions at home</span>
+    <span>Families facing a long-term-care decision</span>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <h2 style="font-size:1.7rem;">How it works</h2>
+  <div class="steps">
+    <div class="step"><div class="num"></div><div><h3>A conversation first</h3><p>A short call to understand what's going on and the combination of OT and navigation that serves you best.</p></div></div>
+    <div class="step"><div class="num"></div><div><h3>A visit at home</h3><p>Assessment or orientation happens in the actual space you live in — where the real challenges show up.</p></div></div>
+    <div class="step"><div class="num"></div><div><h3>A plan you can act on</h3><p>Clear next steps, whether that's equipment, a care plan, or a completed application — with follow-up as needed.</p></div></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <h2 style="font-size:1.7rem;">Service area</h2>
+  <div class="area-card">
+    <p style="margin:0;color:var(--muted);">Based in Halton Region, visiting homes across the Greater Toronto Area and beyond.</p>
+    <div class="town-list">
+      <span><b>Halton:</b> Oakville, Burlington, Milton, Halton Hills</span>
+      <span><b>Peel:</b> Mississauga, Brampton</span>
+      <span><b>Hamilton area:</b> Hamilton, Stoney Creek, Ancaster</span>
+      <span><b>Also serving the wider GTA</b></span>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <h2>Let's talk about what's going on.</h2>
+    <p>A first call is free and helps figure out the right kind of support — no pressure, no obligation.</p>
+    <div class="btnrow" style="justify-content:center;">
+      <a class="btn-primary" href="#offer">See how it works</a>
+      <a class="btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLScPEEAbvy5q3oeM4tyUE3mKKkME4ZUFiCl5hQ2hbbZaM4tttg/viewform?usp=header" target="_blank" rel="noopener">Send us a message</a>
+    </div>
+  </div>
+</section>
+</div>
+
+<footer>ReachAble Home Healthcare — Occupational Therapy &amp; Service Navigation, serving Ontario.</footer>
+</body>
+</html>
